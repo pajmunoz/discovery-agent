@@ -1,8 +1,8 @@
 {
   "personas": [
-    { "name": "Coordinador Administrativo", "role": "coordinador administrativo", "primary": true },
-    { "name": "Consultora Independiente", "role": "consultora independiente", "primary": true },
-    { "name": "Propietario de Pyme", "role": "propietario de pyme", "primary": true }
+    { "name": "Coordinador Administrativo", "role": "coordinador", "primary": true },
+    { "name": "Consultora Independiente", "role": "consultora", "primary": true },
+    { "name": "Propietario de Pyme", "role": "propietario", "primary": true }
   ],
   "pains": [
     { "id": "sitio-dificil-actualizar", "source": "administrativo.md", "persona": "Coordinador Administrativo" },

@@ -1,0 +1,34 @@
+{
+  "hypotheses": [
+    {
+      "id": "H-01",
+      "risk": "alto",
+      "assumption": "Las consultoras independientes y propietarios de pyme registrarán manualmente en una herramienta nueva los contactos que hoy les llegan por WhatsApp, en vez de seguir manejándolos solo en el chat.",
+      "hypothesis": "Creemos que las consultoras independientes y propietarios de pyme registrarán manualmente sus contactos de WhatsApp en una herramienta nueva si el registro toma menos de 1 minuto por contacto, porque hoy reconocen que los prospectos se les 'pierden' por falta de organización (consultora.md, propietario.md).",
+      "metric": "Porcentaje de los contactos reales recibidos por WhatsApp durante la semana piloto que el usuario efectivamente registra en la herramienta (plantilla/formulario), comparado con los que reporta haber recibido.",
+      "threshold": "Al menos 60% de los contactos reportados quedan registrados en la herramienta durante la semana piloto.",
+      "experiment": "Concierge/Mago de Oz: se entrega a 5 participantes (consultoras y propietarios) una plantilla simple (hoja de cálculo o formulario) para registrar cada contacto de WhatsApp durante una semana; al cierre se compara contra lo que cada participante reporta haber recibido esa misma semana.",
+      "decision": "Si pasa (≥60%) → construir el registro centralizado de contactos como funcionalidad central del MVP. Si falla (<60%) → pivotar hacia un mecanismo semi-automático (p. ej. reenvío/forward de WhatsApp) o descartar el registro manual como mecanismo central."
+    },
+    {
+      "id": "H-02",
+      "risk": "alto",
+      "assumption": "Un recordatorio de seguimiento cambia el comportamiento del usuario: hace que efectivamente vuelva a contactar al prospecto, en vez de quedarse solo como una notificación ignorada.",
+      "hypothesis": "Creemos que un recordatorio enviado cuando un contacto lleva 3 días sin actividad hará que la consultora o el propietario de pyme le dé seguimiento, porque hoy admiten que los contactos 'desaparecen' sin que nadie vuelva a escribirles (consultora.md, propietario.md).",
+      "metric": "Porcentaje de contactos recordados que reciben al menos un mensaje de seguimiento del usuario dentro de las 48 horas posteriores al recordatorio, registrado manualmente durante el piloto.",
+      "threshold": "Al menos 50% de los contactos recordados reciben seguimiento dentro de 48 horas (frente a una tasa base sin recordatorio, medida en la primera semana del piloto).",
+      "experiment": "Mago de Oz: durante el piloto de 2 semanas, el equipo envía manualmente un recordatorio (WhatsApp/email) a cada participante cuando uno de sus contactos lleva 3 días sin actividad registrada, y se anota si el participante responde al prospecto dentro de 48 horas.",
+      "decision": "Si pasa (≥50%) → construir el recordatorio automático como funcionalidad del MVP. Si falla (<50%) → descartar el recordatorio simple y explorar otro disparador (p. ej. recordatorio más insistente o por otro canal) antes de construirlo."
+    },
+    {
+      "id": "H-03",
+      "risk": "medio",
+      "assumption": "Los usuarios marcarán el origen (campaña/publicación) de cada contacto y si se convirtió en cliente, dato indispensable para el reporte de conversión por canal.",
+      "hypothesis": "Creemos que los usuarios completarán el campo de origen al registrar un contacto si es opcional y rápido de llenar, porque declaran que hoy no saben qué canal realmente les genera clientes (consultora.md, propietario.md).",
+      "metric": "Porcentaje de los contactos registrados durante el piloto que incluyen el campo de origen completado.",
+      "threshold": "Al menos 40% de los contactos registrados durante las 2 semanas de piloto incluyen el origen marcado.",
+      "experiment": "Smoke test sobre el mismo prototipo de H-01/H-02: se agrega un campo opcional 'origen' a la plantilla de registro y se mide cuántas filas lo completan al cierre del piloto.",
+      "decision": "Si pasa (≥40%) → construir el reporte de conversión por origen como parte del MVP. Si falla (<40%) → pivotar a inferir el origen de forma automática (p. ej. enlace o código único por canal) en vez de pedir que el usuario lo marque a mano, o descartar la funcionalidad en esta iteración."
+    }
+  ]
+}
