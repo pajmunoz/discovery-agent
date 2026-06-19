@@ -1,0 +1,21 @@
+{
+  "personas": [
+    { "name": "Coordinador Administrativo", "role": "coordinador administrativo", "primary": true },
+    { "name": "Consultora Independiente", "role": "consultora independiente", "primary": true },
+    { "name": "Propietario de Pyme", "role": "propietario de pyme", "primary": true }
+  ],
+  "pains": [
+    { "id": "sitio-dificil-actualizar", "source": "administrativo.md", "persona": "Coordinador Administrativo" },
+    { "id": "info-dificil-encontrar", "source": "administrativo.md", "persona": "Coordinador Administrativo" },
+    { "id": "sitio-lento-movil", "source": "administrativo.md", "persona": "Coordinador Administrativo" },
+    { "id": "imagen-desactualizada", "source": "administrativo.md", "persona": "Coordinador Administrativo" },
+    { "id": "dependencia-referidos", "source": "consultora.md", "persona": "Consultora Independiente" },
+    { "id": "web-no-genera-clientes", "source": "consultora.md", "persona": "Consultora Independiente" },
+    { "id": "publicidad-sin-medicion", "source": "consultora.md", "persona": "Consultora Independiente" },
+    { "id": "seguimiento-desorganizado", "source": "consultora.md", "persona": "Consultora Independiente" },
+    { "id": "publicacion-irregular", "source": "propietario.md", "persona": "Propietario de Pyme" },
+    { "id": "bajo-impacto-en-ventas", "source": "propietario.md", "persona": "Propietario de Pyme" },
+    { "id": "contactos-sin-organizar", "source": "propietario.md", "persona": "Propietario de Pyme" },
+    { "id": "sin-medicion-resultados", "source": "propietario.md", "persona": "Propietario de Pyme" }
+  ]
+}
